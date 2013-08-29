@@ -1,0 +1,4 @@
+Date/Time,INTERNAL LIGHTING_LOAD:Lights Electric Consumption [J](RunPeriod),TESTZONE PTAC HEATING COIL:Heating Coil Electric Consumption [J](RunPeriod),TESTZONE PTAC:Packaged Terminal Air Conditioner Sensible Zone Cooling Energy[J](RunPeriod) 
+simdays=001,3645000.,182725042.953003,0.0 
+simdays=001,1093500.,0.0,140994275.377671 
+simdays=365,426405150.926183,39467885.1928904,21802390314.9839 

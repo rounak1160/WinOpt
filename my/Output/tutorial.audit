@@ -1,0 +1,929 @@
+  Processing Data Dictionary (Energy+.idd) File -- Complete
+  Maximum number of Alpha Args=        4500
+  Maximum number of Numeric Args=        3200
+  Number of Object Definitions=         666
+  Number of Section Definitions=           2
+  Processing Input Data File (in.idf) -- Start
+      1 !-Generator IDFEditor 1.42
+      2 !-Option SortedOrder
+      3 
+      4 !-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
+      5 !-      Use '!' comments if they need to be retained when using the IDFEditor.
+      6 
+      7 
+      8 !-   ===========  ALL OBJECTS IN CLASS: VERSION ===========
+      9 
+     10 Version,
+     11     7.1;                     !- Version Identifier
+     12 
+     13 
+     14 !-   ===========  ALL OBJECTS IN CLASS: SIMULATIONCONTROL ===========
+     15 
+     16 SimulationControl,
+     17     Yes,                     !- Do Zone Sizing Calculation
+     18     Yes,                     !- Do System Sizing Calculation
+     19     No,                      !- Do Plant Sizing Calculation
+     20     Yes,                     !- Run Simulation for Sizing Periods
+     21     Yes;                     !- Run Simulation for Weather File Run Periods
+     22 
+     23 
+     24 !-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
+     25 
+     26 Building,
+     27     Building,                !- Name
+     28     0,                       !- North Axis {deg}
+     29     Suburbs,                 !- Terrain
+     30     0.04,                    !- Loads Convergence Tolerance Value
+     31     0.4,                     !- Temperature Convergence Tolerance Value {deltaC}
+     32     FullExterior,            !- Solar Distribution
+     33     25,                      !- Maximum Number of Warmup Days
+     34     ;                        !- Minimum Number of Warmup Days
+     35 
+     36 
+     37 !-   ===========  ALL OBJECTS IN CLASS: TIMESTEP ===========
+     38 
+     39 Timestep,
+     40     6;                       !- Number of Timesteps per Hour
+     41 
+     42 
+     43 !-   ===========  ALL OBJECTS IN CLASS: SIZINGPERIOD:DESIGNDAY ===========
+     44 
+     45 SizingPeriod:DesignDay,
+     46     winter design,           !- Name
+     47     1,                       !- Month
+     48     21,                      !- Day of Month
+     49     WinterDesignDay,         !- Day Type
+     50     10,                      !- Maximum Dry-Bulb Temperature {C}
+     51     0.0,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+     52     ,                        !- Dry-Bulb Temperature Range Modifier Type
+     53     ,                        !- Dry-Bulb Temperature Range Modifier Schedule Name
+     54     Wetbulb,                 !- Humidity Condition Type
+     55     -17.3,                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+     56     ,                        !- Humidity Condition Day Schedule Name
+     57     ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+     58     ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+     59     ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+     60     99063.,                  !- Barometric Pressure {Pa}
+     61     4.9,                     !- Wind Speed {m/s}
+     62     270,                     !- Wind Direction {deg}
+     63     No,                      !- Rain Indicator
+     64     No,                      !- Snow Indicator
+     65     No,                      !- Daylight Saving Time Indicator
+     66     ASHRAEClearSky,          !- Solar Model Indicator
+     67     ,                        !- Beam Solar Day Schedule Name
+     68     ,                        !- Diffuse Solar Day Schedule Name
+     69     ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+     70     ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+     71     0.0;                     !- Sky Clearness
+     72 
+     73 SizingPeriod:DesignDay,
+     74     summer design,           !- Name
+     75     7,                       !- Month
+     76     21,                      !- Day of Month
+     77     SummerDesignDay,         !- Day Type
+     78     46,                      !- Maximum Dry-Bulb Temperature {C}
+     79     10.7,                    !- Daily Dry-Bulb Temperature Range {deltaC}
+     80     ,                        !- Dry-Bulb Temperature Range Modifier Type
+     81     ,                        !- Dry-Bulb Temperature Range Modifier Schedule Name
+     82     Wetbulb,                 !- Humidity Condition Type
+     83     23.0,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+     84     ,                        !- Humidity Condition Day Schedule Name
+     85     ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+     86     ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+     87     ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+     88     99063.,                  !- Barometric Pressure {Pa}
+     89     5.3,                     !- Wind Speed {m/s}
+     90     230,                     !- Wind Direction {deg}
+     91     No,                      !- Rain Indicator
+     92     No,                      !- Snow Indicator
+     93     No,                      !- Daylight Saving Time Indicator
+     94     ASHRAEClearSky,          !- Solar Model Indicator
+     95     ,                        !- Beam Solar Day Schedule Name
+     96     ,                        !- Diffuse Solar Day Schedule Name
+     97     ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+     98     ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+     99     1.0;                     !- Sky Clearness
+    100 
+    101 
+    102 !-   ===========  ALL OBJECTS IN CLASS: RUNPERIOD ===========
+    103 
+    104 RunPeriod,
+    105     Annualsim,               !- Name
+    106     1,                       !- Begin Month
+    107     1,                       !- Begin Day of Month
+    108     12,                      !- End Month
+    109     31,                      !- End Day of Month
+    110     UseWeatherFile,          !- Day of Week for Start Day
+    111     Yes,                     !- Use Weather File Holidays and Special Days
+    112     Yes,                     !- Use Weather File Daylight Saving Period
+    113     No,                      !- Apply Weekend Holiday Rule
+    114     Yes,                     !- Use Weather File Rain Indicators
+    115     Yes,                     !- Use Weather File Snow Indicators
+    116     1,                       !- Number of Times Runperiod to be Repeated
+    117     Yes;                     !- Increment Day of Week on repeat
+    118 
+    119 
+    120 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULETYPELIMITS ===========
+    121 
+    122 ScheduleTypeLimits,
+    123     Any number,              !- Name
+    124     ,                        !- Lower Limit Value
+    125     ,                        !- Upper Limit Value
+    126     ,                        !- Numeric Type
+    127     Dimensionless;           !- Unit Type
+    128 
+    129 
+    130 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
+    131 
+    132 Schedule:Compact,
+    133     Always 4,                !- Name
+    134     Any number,              !- Schedule Type Limits Name
+    135     Through:12/31,           !- Field 1
+    136     For: AllDays,            !- Field 2
+    137     Until: 9:00,             !- Field 3
+    138     4,                       !- Field 4
+    139     Until 18:00,             !- Field 5
+    140     4,                       !- Field 6
+    141     Until 24:00,             !- Field 7
+    142     4;                       !- Field 8
+    143 
+    144 Schedule:Compact,
+    145     Always 20,               !- Name
+    146     Any number,              !- Schedule Type Limits Name
+    147     Through:12/31,           !- Field 1
+    148     For: AllDays,            !- Field 2
+    149     Until: 8:00,             !- Field 3
+    150     5,                       !- Field 4
+    151     Until 18:00,             !- Field 5
+    152     20,                      !- Field 6
+    153     Until 24:00,             !- Field 7
+    154     5;                       !- Field 8
+    155 
+    156 Schedule:Compact,
+    157     Always 24,               !- Name
+    158     Any number,              !- Schedule Type Limits Name
+    159     Through:12/31,           !- Field 1
+    160     For: AllDays,            !- Field 2
+    161     Until: 8:00,             !- Field 3
+    162     40,                      !- Field 4
+    163     Until 18:00,             !- Field 5
+    164     24,                      !- Field 6
+    165     Until 24:00,             !- Field 7
+    166     40;                      !- Field 8
+    167 
+    168 Schedule:Compact,
+    169     Internal load sch,       !- Name
+    170     Any number,              !- Schedule Type Limits Name
+    171     Through: 12/31,          !- Field 1
+    172     For:AllDays,             !- Field 2
+    173     Until 9:00,              !- Field 3
+    174     0,                       !- Field 4
+    175     Until 18:00,             !- Field 5
+    176     .9,                      !- Field 6
+    177     Until 24:00,             !- Field 7
+    178     0;                       !- Field 8
+    179 
+    180 Schedule:Compact,
+    181     Activity Level,          !- Name
+    182     Any number,              !- Schedule Type Limits Name
+    183     Through: 12/31,          !- Field 1
+    184     For:AllDays,             !- Field 2
+    185     Until 9:00,              !- Field 3
+    186     70,                      !- Field 4
+    187     Until 18:00,             !- Field 5
+    188     108,                     !- Field 6
+    189     Until 24:00,             !- Field 7
+    190     70;                      !- Field 8
+    191 
+    192 Schedule:Compact,
+    193     Fan sch,                 !- Name
+    194     Any number,              !- Schedule Type Limits Name
+    195     Through:12/31,           !- Field 1
+    196     For: AllDays,            !- Field 2
+    197     Until: 8:00,             !- Field 3
+    198     0,                       !- Field 4
+    199     Until 18:00,             !- Field 5
+    200     1,                       !- Field 6
+    201     Until 24:00,             !- Field 7
+    202     0;                       !- Field 8
+    203 
+    204 
+    205 !-   ===========  ALL OBJECTS IN CLASS: MATERIAL ===========
+    206 
+    207 ! Floor/Roof Screed- thickness 0.07
+    208 Material,
+    209     Concrete_mat,            !- Name
+    210     Rough,                   !- Roughness
+    211     0.1,                     !- Thickness {m}
+    212     0.81,                    !- Conductivity {W/m-K}
+    213     977,                     !- Density {kg/m3}
+    214     830,                     !- Specific Heat {J/kg-K}
+    215     0.9,                     !- Thermal Absorptance
+    216     0.65,                    !- Solar Absorptance
+    217     0.65;                    !- Visible Absorptance
+    218 
+    219 Material,
+    220     Plaster_mat,             !- Name
+    221     Rough,                   !- Roughness
+    222     0.015,                   !- Thickness {m}
+    223     0.16,                    !- Conductivity {W/m-K}
+    224     600,                     !- Density {kg/m3}
+    225     1000,                    !- Specific Heat {J/kg-K}
+    226     0.9,                     !- Thermal Absorptance
+    227     0.5,                     !- Solar Absorptance
+    228     0.5;                     !- Visible Absorptance
+    229 
+    230 
+    231 !-   ===========  ALL OBJECTS IN CLASS: WINDOWMATERIAL:SIMPLEGLAZINGSYSTEM ===========
+    232 
+    233 WindowMaterial:SimpleGlazingSystem,
+    234     Testwindow,              !- Name
+    235     1.5,                     !- U-Factor {W/m2-K}
+    236     0.25,                    !- Solar Heat Gain Coefficient
+    237     0.5;                     !- Visible Transmittance
+    238 
+    239 
+    240 !-   ===========  ALL OBJECTS IN CLASS: WINDOWMATERIAL:GLAZING ===========
+    241 
+    242 WindowMaterial:Glazing,
+    243     Test_win_Sp,             !- Name
+    244     SpectralAverage,         !- Optical Data Type
+    245     Sp,                      !- Window Glass Spectral Data Set Name
+    246     0.06,                    !- Thickness {m}
+    247     0.45,                    !- Solar Transmittance at Normal Incidence
+    248     0.06,                    !- Front Side Solar Reflectance at Normal Incidence
+    249     0.06,                    !- Back Side Solar Reflectance at Normal Incidence
+    250     0.7,                     !- Visible Transmittance at Normal Incidence
+    251     0.05,                    !- Front Side Visible Reflectance at Normal Incidence
+    252     0.05,                    !- Back Side Visible Reflectance at Normal Incidence
+    253     0,                       !- Infrared Transmittance at Normal Incidence
+    254     0.84,                    !- Front Side Infrared Hemispherical Emissivity
+    255     0.84,                    !- Back Side Infrared Hemispherical Emissivity
+    256     0.9,                     !- Conductivity {W/m-K}
+    257     1,                       !- Dirt Correction Factor for Solar and Visible Transmittance
+    258     No;                      !- Solar Diffusing
+    259 
+    260 
+    261 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
+    262 
+    263 Construction,
+    264     WallRoofFloor_Construction,  !- Name
+    265     Plaster_mat,             !- Outside Layer
+    266     Concrete_mat,            !- Layer 2
+    267     Plaster_mat;             !- Layer 3
+    268 
+    269 Construction,
+    270     North_Window_Construction,  !- Name
+    271     Test_win_Sp;             !- Outside Layer
+    272 
+    273 Construction,
+    274     ALL Other Window_Construction,  !- Name
+    275     Testwindow;              !- Outside Layer
+    276 
+    277 
+    278 !-   ===========  ALL OBJECTS IN CLASS: GLOBALGEOMETRYRULES ===========
+    279 
+    280 GlobalGeometryRules,
+    281     LowerLeftCorner,         !- Starting Vertex Position
+    282     CounterClockWise,        !- Vertex Entry Direction
+    283     Relative;                !- Coordinate System
+    284 
+    285 
+    286 !-   ===========  ALL OBJECTS IN CLASS: ZONE ===========
+    287 
+    288 ! Block 1 - Zone 1
+    289 Zone,
+    290     Testzone,                !- Name
+    291     0,                       !- Direction of Relative North {deg}
+    292     0,                       !- X Origin {m}
+    293     0,                       !- Y Origin {m}
+    294     0,                       !- Z Origin {m}
+    295     1,                       !- Type
+    296     1,                       !- Multiplier
+    297     autocalculate,           !- Ceiling Height {m}
+    298     autocalculate,           !- Volume {m3}
+    299     autocalculate,           !- Floor Area {m2}
+    300     TARP;                    !- Zone Inside Convection Algorithm
+    301 
+    302 
+    303 !-   ===========  ALL OBJECTS IN CLASS: WALL:EXTERIOR ===========
+    304 
+    305 Wall:Exterior,
+    306     N_Wall,                  !- Name
+    307     WallRoofFloor_Construction,  !- Construction Name
+    308     Testzone,                !- Zone Name
+    309     0,                       !- Azimuth Angle {deg}
+    310     90,                      !- Tilt Angle {deg}
+    311     5,                       !- Starting X Coordinate {m}
+    312     5,                       !- Starting Y Coordinate {m}
+    313     0,                       !- Starting Z Coordinate {m}
+    314     5,                       !- Length {m}
+    315     3;                       !- Height {m}
+    316 
+    317 Wall:Exterior,
+    318     S_Wall,                  !- Name
+    319     WallRoofFloor_Construction,  !- Construction Name
+    320     Testzone,                !- Zone Name
+    321     180,                     !- Azimuth Angle {deg}
+    322     90,                      !- Tilt Angle {deg}
+    323     0,                       !- Starting X Coordinate {m}
+    324     0,                       !- Starting Y Coordinate {m}
+    325     0,                       !- Starting Z Coordinate {m}
+    326     5,                       !- Length {m}
+    327     3;                       !- Height {m}
+    328 
+    329 Wall:Exterior,
+    330     E_Wall,                  !- Name
+    331     WallRoofFloor_Construction,  !- Construction Name
+    332     Testzone,                !- Zone Name
+    333     90,                      !- Azimuth Angle {deg}
+    334     90,                      !- Tilt Angle {deg}
+    335     5,                       !- Starting X Coordinate {m}
+    336     0,                       !- Starting Y Coordinate {m}
+    337     0,                       !- Starting Z Coordinate {m}
+    338     5,                       !- Length {m}
+    339     3;                       !- Height {m}
+    340 
+    341 Wall:Exterior,
+    342     W_Wall,                  !- Name
+    343     WallRoofFloor_Construction,  !- Construction Name
+    344     Testzone,                !- Zone Name
+    345     270,                     !- Azimuth Angle {deg}
+    346     90,                      !- Tilt Angle {deg}
+    347     0,                       !- Starting X Coordinate {m}
+    348     5,                       !- Starting Y Coordinate {m}
+    349     0,                       !- Starting Z Coordinate {m}
+    350     5,                       !- Length {m}
+    351     3;                       !- Height {m}
+    352 
+    353 
+    354 !-   ===========  ALL OBJECTS IN CLASS: ROOF ===========
+    355 
+    356 Roof,
+    357     Roof,                    !- Name
+    358     WallRoofFloor_Construction,  !- Construction Name
+    359     Testzone,                !- Zone Name
+    360     0,                       !- Azimuth Angle {deg}
+    361     0,                       !- Tilt Angle {deg}
+    362     5,                       !- Starting X Coordinate {m}
+    363     5,                       !- Starting Y Coordinate {m}
+    364     3,                       !- Starting Z Coordinate {m}
+    365     5,                       !- Length {m}
+    366     5;                       !- Width {m}
+    367 
+    368 
+    369 !-   ===========  ALL OBJECTS IN CLASS: FLOOR:ADIABATIC ===========
+    370 
+    371 Floor:Adiabatic,
+    372     Floor,                   !- Name
+    373     WallRoofFloor_Construction,  !- Construction Name
+    374     Testzone,                !- Zone Name
+    375     90,                      !- Azimuth Angle {deg}
+    376     180,                     !- Tilt Angle {deg}
+    377     0,                       !- Starting X Coordinate {m}
+    378     0,                       !- Starting Y Coordinate {m}
+    379     0,                       !- Starting Z Coordinate {m}
+    380     5,                       !- Length {m}
+    381     5;                       !- Width {m}
+    382 
+    383 
+    384 !-   ===========  ALL OBJECTS IN CLASS: WINDOW ===========
+    385 
+    386 Window,
+    387     North_Window,            !- Name
+    388     North_Window_Construction,  !- Construction Name
+    389     N_Wall,                  !- Building Surface Name
+    390     ,                        !- Shading Control Name
+    391     ,                        !- Frame and Divider Name
+    392     1,                       !- Multiplier
+    393     1.5,                     !- Starting X Coordinate {m}
+    394     0.5,                     !- Starting Z Coordinate {m}
+    395     2,                       !- Length {m}
+    396     1;                       !- Height {m}
+    397 
+    398 Window,
+    399     South_Window,            !- Name
+    400     ALL Other Window_Construction,  !- Construction Name
+    401     S_Wall,                  !- Building Surface Name
+    402     ,                        !- Shading Control Name
+    403     ,                        !- Frame and Divider Name
+    404     1,                       !- Multiplier
+    405     1.5,                     !- Starting X Coordinate {m}
+    406     0.5,                     !- Starting Z Coordinate {m}
+    407     2,                       !- Length {m}
+    408     1;                       !- Height {m}
+    409 
+    410 Window,
+    411     East_Window,             !- Name
+    412     ALL Other Window_Construction,  !- Construction Name
+    413     E_Wall,                  !- Building Surface Name
+    414     ,                        !- Shading Control Name
+    415     ,                        !- Frame and Divider Name
+    416     1,                       !- Multiplier
+    417     1.5,                     !- Starting X Coordinate {m}
+    418     0.5,                     !- Starting Z Coordinate {m}
+    419     2,                       !- Length {m}
+    420     1;                       !- Height {m}
+    421 
+    422 Window,
+    423     West_Window,             !- Name
+    424     ALL Other Window_Construction,  !- Construction Name
+    425     W_Wall,                  !- Building Surface Name
+    426     ,                        !- Shading Control Name
+    427     ,                        !- Frame and Divider Name
+    428     1,                       !- Multiplier
+    429     1.5,                     !- Starting X Coordinate {m}
+    430     0.5,                     !- Starting Z Coordinate {m}
+    431     2,                       !- Length {m}
+    432     1;                       !- Height {m}
+    433 
+    434 
+    435 !-   ===========  ALL OBJECTS IN CLASS: SHADING:OVERHANG ===========
+    436 
+    437 Shading:Overhang,
+    438     Test_overhang,           !- Name
+    439     South_Window,            !- Window or Door Name
+    440     0.0,                     !- Height above Window or Door {m}
+    441     90,                      !- Tilt Angle from Window/Door {deg}
+    442     0.0,                     !- Left extension from Window/Door Width {m}
+    443     0.0,                     !- Right extension from Window/Door Width {m}
+    444     1.0;                     !- Depth {m}
+    445 
+    446 
+    447 !-   ===========  ALL OBJECTS IN CLASS: PEOPLE ===========
+    448 
+    449 People,
+    450     Occupancy_load ,         !- Name
+    451     Testzone,                !- Zone or ZoneList Name
+    452     Internal load sch,       !- Number of People Schedule Name
+    453     People,                  !- Number of People Calculation Method
+    454     4,                       !- Number of People
+    455     ,                        !- People per Zone Floor Area {person/m2}
+    456     ,                        !- Zone Floor Area per Person {m2/person}
+    457     0.1,                     !- Fraction Radiant
+    458     autocalculate,           !- Sensible Heat Fraction
+    459     Activity Level,          !- Activity Level Schedule Name
+    460     3.82E-08,                !- Carbon Dioxide Generation Rate {m3/s-W}
+    461     No,                      !- Enable ASHRAE 55 Comfort Warnings
+    462     ZoneAveraged;            !- Mean Radiant Temperature Calculation Type
+    463 
+    464 
+    465 !-   ===========  ALL OBJECTS IN CLASS: LIGHTS ===========
+    466 
+    467 Lights,
+    468     Internal Lighting_load,  !- Name
+    469     Testzone,                !- Zone or ZoneList Name
+    470     Internal load sch,       !- Schedule Name
+    471     Watts/Area,              !- Design Level Calculation Method
+    472     ,                        !- Lighting Level {W}
+    473     5,                       !- Watts per Zone Floor Area {W/m2}
+    474     ,                        !- Watts per Person {W/person}
+    475     0,                       !- Return Air Fraction
+    476     0.42,                    !- Fraction Radiant
+    477     0.18,                    !- Fraction Visible
+    478     1,                       !- Fraction Replaceable
+    479     General,                 !- End-Use Subcategory
+    480     No;                      !- Return Air Fraction Calculated from Plenum Temperature
+    481 
+    482 
+    483 !-   ===========  ALL OBJECTS IN CLASS: ELECTRICEQUIPMENT ===========
+    484 
+    485 ElectricEquipment,
+    486     Internal Equipments_load,!- Name
+    487     Testzone,                !- Zone or ZoneList Name
+    488     Internal load sch,       !- Schedule Name
+    489     Watts/Area,              !- Design Level Calculation Method
+    490     ,                        !- Design Level {W}
+    491     10,                      !- Watts per Zone Floor Area {W/m2}
+    492     ,                        !- Watts per Person {W/person}
+    493     0,                       !- Fraction Latent
+    494     0.3,                     !- Fraction Radiant
+    495     0,                       !- Fraction Lost
+    496     General;                 !- End-Use Subcategory
+    497 
+    498 
+    499 !-   ===========  ALL OBJECTS IN CLASS: DAYLIGHTING:CONTROLS ===========
+    500 
+    501 Daylighting:Controls,
+    502     Testzone,                !- Zone Name
+    503     1,                       !- Total Daylighting Reference Points
+    504     2.5,                     !- X-Coordinate of First Reference Point {m}
+    505     2.5,                     !- Y-Coordinate of First Reference Point {m}
+    506     0.8,                     !- Z-Coordinate of First Reference Point {m}
+    507     ,                        !- X-Coordinate of Second Reference Point {m}
+    508     ,                        !- Y-Coordinate of Second Reference Point {m}
+    509     ,                        !- Z-Coordinate of Second Reference Point {m}
+    510     1,                       !- Fraction of Zone Controlled by First Reference Point
+    511     ,                        !- Fraction of Zone Controlled by Second Reference Point
+    512     500,                     !- Illuminance Setpoint at First Reference Point {lux}
+    513     ,                        !- Illuminance Setpoint at Second Reference Point {lux}
+    514     1,                       !- Lighting Control Type
+    515     15,                      !- Glare Calculation Azimuth Angle of View Direction Clockwise from Zone y-Axis {deg}
+    516     22,                      !- Maximum Allowable Discomfort Glare Index
+    517     0.3,                     !- Minimum Input Power Fraction for Continuous Dimming Control
+    518     0.2,                     !- Minimum Light Output Fraction for Continuous Dimming Control
+    519     1,                       !- Number of Stepped Control Steps
+    520     1;                       !- Probability Lighting will be Reset When Needed in Manual Stepped Control
+    521 
+    522 
+    523 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:DAYLIGHTFACTORS ===========
+    524 
+    525 Output:DaylightFactors,
+    526     AllShadowCalculationDays;!- Reporting Days
+    527 !
+    528 !
+    529 !-   ===========  ALL OBJECTS IN CLASS: HVACTEMPLATE:THERMOSTAT ===========
+    530 !
+    531 ! HVACTemplate:Thermostat,
+    532 !     Thermostat_test,         !- Name
+    533 !     Always 20,               !- Heating Setpoint Schedule Name
+    534 !     20,                      !- Constant Heating Setpoint {C}
+    535 !     Always 24,               !- Cooling Setpoint Schedule Name
+    536 !     24;                      !- Constant Cooling Setpoint {C}
+    537 !
+    538 !
+    539 !-   ===========  ALL OBJECTS IN CLASS: HVACTEMPLATE:ZONE:PTAC ===========
+    540 !
+    541 ! HVACTemplate:Zone:PTAC,
+    542 !     Testzone,                !- Zone Name
+    543 !     Thermostat_test,         !- Template Thermostat Name
+    544 !     autosize,                !- Cooling Supply Air Flow Rate {m3/s}
+    545 !     autosize,                !- Heating Supply Air Flow Rate {m3/s}
+    546 !     ,                        !- No Load Supply Air Flow Rate {m3/s}
+    547 !     1.2,                     !- Zone Heating Sizing Factor
+    548 !     1.2,                     !- Zone Cooling Sizing Factor
+    549 !     Sum,                     !- Outdoor Air Method
+    550 !     0.00944,                 !- Outdoor Air Flow Rate per Person {m3/s}
+    551 !     0.01,                    !- Outdoor Air Flow Rate per Zone Floor Area {m3/s-m2}
+    552 !     ,                        !- Outdoor Air Flow Rate per Zone {m3/s}
+    553 !     ,                        !- System Availability Schedule Name
+    554 !     Fan sch,                 !- Supply Fan Operating Mode Schedule Name
+    555 !     DrawThrough,             !- Supply Fan Placement
+    556 !     0.7,                     !- Supply Fan Total Efficiency
+    557 !     75,                      !- Supply Fan Delta Pressure {Pa}
+    558 !     0.9,                     !- Supply Fan Motor Efficiency
+    559 !     SingleSpeedDX,           !- Cooling Coil Type
+    560 !     ,                        !- Cooling Coil Availability Schedule Name
+    561 !     autosize,                !- Cooling Coil Rated Capacity {W}
+    562 !     autosize,                !- Cooling Coil Rated Sensible Heat Ratio
+    563 !     3,                       !- Cooling Coil Rated COP {W/W}
+    564 !     Electric,                !- Heating Coil Type
+    565 !     ,                        !- Heating Coil Availability Schedule Name
+    566 !     autosize,                !- Heating Coil Capacity {W}
+    567 !     0.8,                     !- Gas Heating Coil Efficiency
+    568 !     ,                        !- Gas Heating Coil Parasitic Electric Load {W}
+    569 !     ;                        !- Dedicated Outdoor Air System Name
+    570 
+    571 
+    572 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLEDICTIONARY ===========
+    573 
+    574 Output:VariableDictionary,
+    575     IDF,                     !- Key Field
+    576     Name;                    !- Sort Option
+    577 
+    578 
+    579 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:SUMMARYREPORTS ===========
+    580 
+    581 Output:Table:SummaryReports,
+    582     AllSummary;              !- Report 1 Name
+    583 
+    584 
+    585 !-   ===========  ALL OBJECTS IN CLASS: OUTPUTCONTROL:TABLE:STYLE ===========
+    586 
+    587 OutputControl:Table:Style,
+    588     HTML;                    !- Column Separator
+    589 
+    590 
+    591 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:VARIABLE ===========
+    592 
+    593 Output:Variable,
+    594     *,                       !- Key Value
+    595     Lights Electric Consumption ,  !- Variable Name
+    596     Environment;             !- Reporting Frequency
+    597 
+    598 Output:Variable,
+    599     *,                       !- Key Value
+    600     Heating Coil Electric Consumption,  !- Variable Name
+    601     Environment;             !- Reporting Frequency
+    602 
+    603 Output:Variable,
+    604     *,                       !- Key Value
+    605     Packaged Terminal Air Conditioner Sensible Zone Cooling Energy,  !- Variable Name
+    606     Environment;             !- Reporting Frequency
+    607 !
+    608 ! Cannot find Energy+.idd as specified in Energy+.ini.
+    609 !
+    610 ! Since the Energy+.IDD file cannot be read no range or choice checking was performed.
+    611 !
+    612 ! -------------------------------------------------------------
+    613 ! New objects created from ExpandObjects
+    614 ! -------------------------------------------------------------
+    615 !
+    616 
+    617 ScheduleTypeLimits,
+    618   HVACTemplate Any Number;                                 !- Name
+    619 
+    620 ThermostatSetpoint:DualSetpoint,
+    621   Thermostat_test Dual SP Control,                         !- Name
+    622   Always 20,                                               !- Heating Setpoint Temperature Schedule Name
+    623   Always 24;                                               !- Cooling Setpoint Temperature Schedule Name
+    624 
+    625 Schedule:Compact,
+    626   HVACTemplate-Always 1,                                   !- Name
+    627   HVACTemplate Any Number,                                 !- Schedule Type Limits Name
+    628   Through: 12/31,                                          !- Field 1
+    629   For: AllDays,                                            !- Field 2
+    630   Until: 24:00,                                            !- Field 3
+    631   1;                                                       !- Field 4
+    632 
+    633 Schedule:Compact,
+    634   HVACTemplate-Always 4,                                   !- Name
+    635   HVACTemplate Any Number,                                 !- Schedule Type Limits Name
+    636   Through: 12/31,                                          !- Field 1
+    637   For: AllDays,                                            !- Field 2
+    638   Until: 24:00,                                            !- Field 3
+    639   4;                                                       !- Field 4
+    640 
+    641 ZoneControl:Thermostat,
+    642   Testzone Thermostat,                                     !- Name
+    643   Testzone,                                                !- Zone or ZoneList Name
+    644   HVACTemplate-Always 4,                                   !- Control Type Schedule Name
+    645   ThermostatSetpoint:DualSetpoint,                         !- Control Object Type
+    646   Thermostat_test Dual SP Control;                         !- Control Name
+    647 
+    648 DesignSpecification:OutdoorAir,
+    649   SZ DSOA Testzone,                                        !- Name
+    650   Sum,                                                     !- Outdoor Air Method
+    651   0.00944,                                                 !- Outdoor Air Flow per Person {m3/s}
+    652   0.01,                                                    !- Outdoor Air Flow per Zone Floor Area {m3/s-m2}
+    653   0.0;                                                     !- Outdoor Air Flow per Zone {m3/s}
+    654 
+    655 Sizing:Zone,
+    656   Testzone,                                                !- Zone or ZoneList Name
+    657   14,                                                      !- Zone Cooling Design Supply Air Temperature {C}
+    658   50,                                                      !- Zone Heating Design Supply Air Temperature {C}
+    659   0.008,                                                   !- Zone Cooling Design Supply Air Humidity Ratio {kg-H20/kg-air}
+    660   0.008,                                                   !- Zone Heating Design Supply Air Humidity Ratio {kg-H2O/kg-air}
+    661   SZ DSOA Testzone,                                        !- Design Specification Outdoor Air Object Name
+    662   1.2,                                                     !- Zone Heating Sizing Factor
+    663   1.2,                                                     !- Zone Cooling Sizing Factor
+    664   DesignDay,                                               !- Cooling Design Air Flow Method
+    665   0,                                                       !- Cooling Design Air Flow Rate {m3/s}
+    666   ,                                                        !- Cooling Minimum Air Flow per Zone Floor Area {m3/s-m2}
+    667   ,                                                        !- Cooling Minimum Air Flow {m3/s}
+    668   0,                                                       !- Cooling Minimum Air Flow Fraction {}
+    669   DesignDay,                                               !- Heating Design Air Flow Method
+    670   0,                                                       !- Heating Design Air Flow Rate {m3/s}
+    671   ,                                                        !- Heating Maximum Air Flow per Zone Floor Area {m3/s-m2}
+    672   ,                                                        !- Heating Maximum Air Flow {m3/s}
+    673   0,                                                       !- Heating Maximum Air Flow Fraction {}
+    674   SZ DSZAD Testzone;                                       !- Design Specification Zone Air Distribution Object Name
+    675 
+    676 DesignSpecification:ZoneAirDistribution,
+    677   SZ DSZAD Testzone,                                       !- Name
+    678   1,                                                       !- Zone Air Distribution Effectiveness in Cooling Mode {}
+    679   1;                                                       !- Zone Air Distribution Effectiveness in Heating Mode {}
+    680 
+    681 ZoneHVAC:EquipmentConnections,
+    682   Testzone,                                                !- Zone Name
+    683   Testzone Equipment,                                      !- Zone Conditioning Equipment List Name
+    684   Testzone PTAC Supply Inlet,                              !- Zone Air Inlet Node or NodeList Name
+    685   Testzone PTAC Return,                                    !- Zone Air Exhaust Node or NodeList Name
+    686   Testzone Zone Air Node,                                  !- Zone Air Node Name
+    687   Testzone Return Outlet;                                  !- Zone Return Air Node Name
+    688 
+    689 ZoneHVAC:EquipmentList,
+    690   Testzone Equipment,                                      !- Name
+    691   ZoneHVAC:PackagedTerminalAirConditioner,                 !- Zone Equipment Object Type
+    692   Testzone PTAC,                                           !- Zone Equipment Name
+    693   1,                                                       !- Zone Equipment Cooling Sequence
+    694   1;                                                       !- Zone Equipment Heating or No-Load Sequence
+    695 ! Set PTAC outdoor air to zero, because zone is served by dedicated outdoor air system (DOAS)
+    696 
+    697 ZoneHVAC:PackagedTerminalAirConditioner,
+    698   Testzone PTAC,                                           !- Name
+    699   HVACTemplate-Always 1,                                   !- Availability Schedule Name
+    700   Testzone PTAC Return,                                    !- Air Inlet Node Name
+    701   Testzone PTAC Supply Inlet,                              !- Air Outlet Node Name
+    702   OutdoorAir:Mixer,                                        !- Outdoor Air Mixer Object Type
+    703   Testzone PTAC OA Mixing Box,                             !- Outdoor Air Mixer Name
+    704   autosize,                                                !- Supply air volumetric flow rate during cooling operation {m3/s}
+    705   autosize,                                                !- Supply air volumetric flow rate during heating operation {m3/s}
+    706   ,                                                        !- Supply air volumetric flow rate when no cooling or heating is needed {m3/s}
+    707   autosize,                                                !- Outside air volumetric flow rate during cooling operation {m3/s}
+    708   autosize,                                                !- Outside air volumetric flow rate during heating operation {m3/s}
+    709   autosize,                                                !- Outside air volumetric flow rate when no cooling or heating is needed {m3/s}
+    710   Fan:OnOff,                                               !- Supply Air Fan Object Type
+    711   Testzone PTAC Supply Fan,                                !- Supply Air Fan Name
+    712   Coil:Heating:Electric,                                   !- Supplemental Heating Coil Object Type
+    713   Testzone PTAC Heating Coil,                              !- Heating Coil Name
+    714   Coil:Cooling:DX:SingleSpeed,                             !- Cooling Coil Object Type
+    715   Testzone PTAC Cooling Coil,                              !- Cooling Coil Name
+    716   DrawThrough,                                             !- Fan Placement
+    717   Fan sch;                                                 !- Supply Air Fan Operating Mode Schedule Name
+    718 
+    719 Fan:OnOff,
+    720   Testzone PTAC Supply Fan,                                !- Name
+    721   HVACTemplate-Always 1,                                   !- Availability Schedule Name
+    722   0.7,                                                     !- Fan Efficiency
+    723   75,                                                      !- Pressure Rise {Pa}
+    724   autosize,                                                !- Maximum Flow Rate {m3/s}
+    725   0.9,                                                     !- Motor Efficiency
+    726   1,                                                       !- Motor in Airstream Fraction
+    727   Testzone PTAC Heating Coil Outlet,                       !- Air Inlet Node Name
+    728   Testzone PTAC Supply Inlet;                              !- Air Outlet Node Name
+    729 
+    730 OutdoorAir:Mixer,
+    731   Testzone PTAC OA Mixing Box,                             !- Name
+    732   Testzone PTAC Mixed Air Outlet,                          !- Mixed Air Node Name
+    733   Testzone PTAC Outside Air Inlet,                         !- Outside Air Stream Node Name
+    734   Testzone PTAC Relief Air Outlet,                         !- Relief Air Stream Node Name
+    735   Testzone PTAC Return;                                    !- Return Air Stream Node Name
+    736 
+    737 OutdoorAir:Node,
+    738   Testzone PTAC Outside Air Inlet,                         !- Name
+    739   -1;                                                      !- Height Above Ground
+    740 
+    741 Coil:Cooling:DX:SingleSpeed,
+    742   Testzone PTAC Cooling Coil,                              !- Name
+    743   HVACTemplate-Always 1,                                   !- Availability Schedule Name
+    744   autosize,                                                !- Rated Total Cooling Capacity (gross) {W}
+    745   autosize,                                                !- Rated Sensible Heat Ratio
+    746   3,                                                       !- Rated COP
+    747   autosize,                                                !- Rated Air Volume Flow Rate {m3/s}
+    748   ,                                                        !- Rated Evaporator Fan Power per Volume Flow Rate {W/(m3/s)}
+    749   Testzone PTAC Mixed Air Outlet,                          !- Air Inlet Node Name
+    750   Testzone PTAC Cooling Coil Outlet,                       !- Air Outlet Node Name
+    751   Testzone PTAC Cooling Coil Cap-FT,                       !- Total Cooling Capacity Modifier Curve (function of temperature)
+    752   Testzone PTAC Cooling Coil Cap-FF,                       !- Total Cooling Capacity Modifier Curve (function of flow fraction)
+    753   Testzone PTAC Cooling Coil EIR-FT,                       !- Energy Input Ratio Modifier Curve (function of temperature)
+    754   Testzone PTAC Cooling Coil EIR-FF,                       !- Energy Input Ratio Modifier Curve (function of flow fraction)
+    755   Testzone PTAC Cooling Coil Coil PLF,                     !- Part Load Fraction Correlation (function of part load ratio)
+    756   0,                                                       !- Nominal Time for Condensate Removal to Begin
+    757   0,                                                       !- Ratio of Initial Moisture Evaporation Rate and Steady State Latent Capacity
+    758   0,                                                       !- Maximum Cycling Rate
+    759   0,                                                       !- Latent Capacity Time Constant
+    760   Testzone PTAC Cooling Coil Condenser Inlet,              !- Condenser Air Inlet Node Name
+    761   AirCooled,                                               !- Condenser Type
+    762   0,                                                       !- Evaporative Condenser Effectiveness
+    763   ,                                                        !- Evaporative Condenser Air Flow Rate
+    764   0,                                                       !- Evaporative Condenser Pump Rated Power Consumption
+    765   0,                                                       !- Crankcase Heater Capacity
+    766   10;                                                      !- Maximum Outdoor Dry-Bulb Temperature for Crankcase Heater Operation
+    767 
+    768 Curve:Biquadratic,
+    769   Testzone PTAC Cooling Coil Cap-FT,                       !- Name
+    770   0.942587793,                                             !- Coefficient1 Constant
+    771   0.009543347,                                             !- Coefficient2 x
+    772   0.00068377,                                              !- Coefficient3 x**2
+    773   -0.011042676,                                            !- Coefficient4 y
+    774   0.000005249,                                             !- Coefficient5 y**2
+    775   -0.00000972,                                             !- Coefficient6 x*y
+    776   12.77778,                                                !- Minimum Value of x
+    777   23.88889,                                                !- Maximum Value of x
+    778   18.0,                                                    !- Minimum Value of y
+    779   46.11111;                                                !- Maximum Value of y
+    780 
+    781 Curve:Quadratic,
+    782   Testzone PTAC Cooling Coil Cap-FF,                       !- Name
+    783   0.8,                                                     !- Coefficient1 Constant
+    784   0.2,                                                     !- Coefficient2 x
+    785   0,                                                       !- Coefficient3 x**2
+    786   0.5,                                                     !- Minimum Value of x
+    787   1.5;                                                     !- Maximum Value of x
+    788 
+    789 Curve:Biquadratic,
+    790   Testzone PTAC Cooling Coil EIR-FT,                       !- Name
+    791   0.342414409,                                             !- Coefficient1 Constant
+    792   0.034885008,                                             !- Coefficient2 x
+    793   -0.0006237,                                              !- Coefficient3 x**2
+    794   0.004977216,                                             !- Coefficient4 y
+    795   0.000437951,                                             !- Coefficient5 y**2
+    796   -0.000728028,                                            !- Coefficient6 x*y
+    797   12.77778,                                                !- Minimum Value of x
+    798   23.88889,                                                !- Maximum Value of x
+    799   18.0,                                                    !- Minimum Value of y
+    800   46.11111;                                                !- Maximum Value of y
+    801 
+    802 Curve:Quadratic,
+    803   Testzone PTAC Cooling Coil EIR-FF,                       !- Name
+    804   1.1552,                                                  !- Coefficient1 Constant
+    805   -0.1808,                                                 !- Coefficient2 x
+    806   0.0256,                                                  !- Coefficient3 x**2
+    807   0.5,                                                     !- Minimum Value of x
+    808   1.5;                                                     !- Maximum Value of x
+    809 
+    810 Curve:Quadratic,
+    811   Testzone PTAC Cooling Coil Coil PLF,                     !- Name
+    812   0.85,                                                    !- Coefficient1 Constant
+    813   0.15,                                                    !- Coefficient2 x
+    814   0,                                                       !- Coefficient3 x**2
+    815   0,                                                       !- Minimum Value of x
+    816   1;                                                       !- Maximum Value of x
+    817 
+    818 OutdoorAir:Node,
+    819   Testzone PTAC Cooling Coil Condenser Inlet,              !- Name
+    820   -1;                                                      !- Height Above Ground
+    821 
+    822 Coil:Heating:Electric,
+    823   Testzone PTAC Heating Coil,                              !- Name
+    824   HVACTemplate-Always 1,                                   !- Availability Schedule Name
+    825   1,                                                       !- Efficiency
+    826   autosize,                                                !- Nominal Capacity of the Coil {W}
+    827   Testzone PTAC Cooling Coil Outlet,                       !- Air Inlet Node Name
+    828   Testzone PTAC Heating Coil Outlet,                       !- Air Outlet Node Name
+    829   ;                                                        !- Coil Temp Setpoint Node
+    830 
+    831 Output:PreprocessorMessage,
+    832   ExpandObjects,                                           !- Preprocessor Name
+    833   Warning,                                                 !- Error Severity
+    834   Cannot find Energy+.idd as specified in Energy+.ini.;    !- message line
+    835 
+    836 Output:PreprocessorMessage,
+    837   ExpandObjects,                                           !- Preprocessor Name
+    838   Warning,                                                 !- Error Severity
+    839   Since the Energy+.IDD file cannot be read no range or choice checking was,  !- message line
+    840   performed.;                                              !- message line
+  Processing Input Data File (in.idf) -- Complete
+  Number of IDF "Lines"=          69
+  Maximum number of Alpha IDF Args=          14
+  Maximum number of Numeric IDF Args=          18
+  Number of IDF "Lines"=          69
+  Number of Defaulted Fields=          15
+  Number of Fields with Defaults=         146
+  Number of Autosized Fields=          10
+  Number of Autosizable Fields =          13
+  Number of Autocalculated Fields=           4
+  Number of Autocalculatable Fields =           4
+ Getting object=OUTPUT:PREPROCESSORMESSAGE
+ Getting object=VERSION
+ Getting object=TIMESTEP
+ Getting object=SIMULATIONCONTROL
+ Getting object=OUTPUT:VARIABLEDICTIONARY
+ Getting object=DESIGNSPECIFICATION:OUTDOORAIR
+ Getting object=DESIGNSPECIFICATION:ZONEAIRDISTRIBUTION
+ Getting object=ZONE
+ Getting object=SIZING:ZONE
+ Getting object=SIZINGPERIOD:DESIGNDAY
+ Getting object=RUNPERIOD
+ Getting object=OUTPUT:VARIABLE
+ Getting object=SCHEDULE:COMPACT
+  Processing Schedule Input -- Start
+ Getting object=SCHEDULETYPELIMITS
+  Processing Schedule Input -- Complete
+ Getting object=BUILDING
+ Getting object=MATERIAL
+ Getting object=WINDOWMATERIAL:GLAZING
+ Getting object=WINDOWMATERIAL:SIMPLEGLAZINGSYSTEM
+ Getting object=CONSTRUCTION
+ Getting object=GLOBALGEOMETRYRULES
+ Getting object=WALL:EXTERIOR
+ Getting object=ROOF
+ Getting object=FLOOR:ADIABATIC
+ Getting object=WINDOW
+ Getting object=SHADING:OVERHANG
+ Getting object=PEOPLE
+ Getting object=LIGHTS
+ Getting object=ELECTRICEQUIPMENT
+ Getting object=DAYLIGHTING:CONTROLS
+ Getting object=OUTPUT:DAYLIGHTFACTORS
+ Getting object=OUTDOORAIR:NODE
+ Getting object=ZONECONTROL:THERMOSTAT
+ Getting object=THERMOSTATSETPOINT:DUALSETPOINT
+ Getting object=ZONEHVAC:EQUIPMENTCONNECTIONS
+ Getting object=ZONEHVAC:EQUIPMENTLIST
+ Getting object=ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER
+ Getting object=OUTDOORAIR:MIXER
+ Getting object=FAN:ONOFF
+ Getting object=COIL:HEATING:ELECTRIC
+ Getting object=COIL:COOLING:DX:SINGLESPEED
+ Getting object=CURVE:BIQUADRATIC
+ Getting object=CURVE:QUADRATIC
+ Getting object=OUTPUTCONTROL:TABLE:STYLE
+ Getting object=OUTPUT:TABLE:SUMMARYREPORTS
+ NumOfRVariable=        1202
+ NumOfRVariable(Total)=        1202
+ NumOfRVariable(Actual)=          17
+ NumOfRVariable(Summed)=          17
+ NumOfRVariable(Meter)=          16
+ NumOfIVariable=          30
+ NumOfIVariable(Total)=          30
+ NumOfIVariable(Actual)=           0
+ NumOfIVariable(Summed)=           0
+ MaxRVariable=        1000
+ MaxIVariable=          10
+ NumEnergyMeters=          36
+ NumVarMeterArrays=          16
+ maxUniqueKeyCount=        1500
+ maxNumberOfFigures=           1
+ MonthlyFieldSetInputCount=           0
+ NumConsideredOutputVariables=           3
+ MaxConsideredOutputVariables=           3
+ numActuatorsUsed=           0
+ numEMSActuatorsAvailable=           0
+ maxEMSActuatorsAvailable=           0
+ numInternalVariablesUsed=           0
+ numEMSInternalVarsAvailable=           0
+ maxEMSInternalVarsAvailable=           0
+ NumOfNodeConnections=          19
+ MaxNumOfNodeConnections=           0

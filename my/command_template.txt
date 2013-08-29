@@ -1,0 +1,26 @@
+/* GenOpt example command file
+   MWetter@lbl.gov, 06/18/2003
+*/
+Vary{
+  Parameter{ // solar, visible, and thermal transmittance of shading device
+    Name    = azimuthangle;
+    Min     = %minvalue%;
+    Ini     = %inivalue%;
+    Max     = %maxvalue%;
+    Step    = %stepvalue%;
+  }
+}
+
+OptimizationSettings{
+  MaxIte = 2000;
+  MaxEqualResults = 100;
+  WriteStepNumber = false;
+}
+
+Algorithm{
+  Main = GPSHookeJeeves;
+  MeshSizeDivider = 2;
+  InitialMeshSizeExponent = 0;
+  MeshSizeExponentIncrement = 1;
+  NumberOfStepReduction = 4;
+}

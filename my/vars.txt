@@ -1,0 +1,4 @@
+3
+azimuth   = 87;
+depth=0.5
+wwr=	56

@@ -1,0 +1,293 @@
+/* 
+CSS Document 
+Wink Hosting (www.winkhosting.com)
+Designed By Alexis Corredor
+alexis.corredor@gmail.com
+*/
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+/*HEADER*/
+#header{
+	width: 1000px;
+	position:relative; 
+	height: 200px;
+	background-image:url(header.jpg);
+	background-repeat:no-repeat;
+	background-size:1000px;
+	left:10px;
+}
+/*COMPANY NAME IN HEADER*/
+#companyname {
+	position:absolute;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 36px;
+	font-weight: bold;
+	margin-top:50px;
+	margin-left:40px;
+	left: 0px;
+	top: 0px;
+}
+/*MENU IN HEADER*/
+#menu{
+	position:absolute;
+	bottom: 20px;
+	right: 30px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+}
+#menu a{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:#333333;
+	text-decoration:none;
+}
+#menu a:hover{
+	text-decoration:underline;
+}
+
+/*LEFT PANEL (News, Links, etc.)*/
+#leftpanel{
+	float:left;
+	width:200px;
+}
+
+#acl{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:#FFFFFF;
+      text-decoration:none;
+}
+
+/*CONTENT*/
+#content{
+	width: 800px;
+}
+#contenttext{
+	float:right;
+	width: 580px;
+	/*border: 4px outset #0000FF; */
+	bottom: 20px;
+}
+
+#contenttext1{
+	float:right;
+	width: 580px;
+	bottom: 20px;
+}
+/*FOOTER*/
+.footer{
+	height: 32px;
+	background-image:url(bg_footer.gif);
+	background-repeat:no-repeat;
+	clear:both;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+/*FOOTER LINKS*/
+.footer a{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.footer a:hover{
+	text-decoration:underline;
+}
+
+/*TABLE*/
+.table_top{
+	width: 204px; 
+	height: 27px;
+	background-image:url(table_top.jpg);
+	background-repeat:no-repeat;
+}
+.table_content{
+	width: 204px;
+	background-image:url(table_content.jpg);
+	background-repeat:repeat-y;
+}
+.table_text{
+	margin-left:15px;
+	margin-right:15px;
+	text-align:justify;
+}
+
+.table_2{
+	text-align:left;
+	width:90%;
+	border-left:1px solid #e5eff8;
+	margin:1em auto;
+	padding:10px;
+}
+.b_txt{
+	margin-left:50px;
+        margin-right:15px;
+        text-align:justify;
+}
+.table_bottom{
+	width: 204px; height: 23px;
+}
+
+/*TEXT STYLES*/
+.news_date {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #0099CC;
+}
+.body_text {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	 margin-left:15px;
+         margin-right:15px;
+
+}
+.news_more {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FF9900;
+	font-weight: bold;
+}
+.news_text {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.subtitle_gray {	font-family:Verdana, Arial, Helvetica, sans-serif;	
+	font-weight: bold;
+	font-size: 14px;
+	color: #CCCCCC;
+}
+.title_blue {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 22px; color: #7DA5E0; }
+.title_panel {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn {
+font-family:georgia,serif;
+font-size:0.85em;
+padding:20px;
+
+background:none repeat scroll 0 0 #AAAAAA;
+color:#FFFFFF;
+cursor:pointer;
+display:block;
+/* float:left; */
+padding:5px;
+position:relative;
+text-decoration:none;
+}
+.btn * {
+background-image:url("http://monc.se/kitchen/stew/buttons/btn2.png");
+background-repeat:no-repeat;
+display:block;
+font-style:normal;
+position:relative;
+}
+.btn i {
+background-position:left top;
+height:5px;
+left:0;
+margin-bottom:-5px;
+position:absolute;
+top:0;
+width:5px;
+}
+.btn span {
+background-position:left bottom;
+left:-5px;
+margin-bottom:-5px;
+padding:0 0 5px 10px;
+}
+.btn span i {
+background-position:right bottom;
+height:100%;
+left:100%;
+margin-bottom:0;
+position:absolute;
+top:0;
+width:10px;
+}
+.btn span span {
+background-position:right top;
+height:0;
+margin-left:10px;
+position:absolute;
+right:-10px;
+top:-5px;
+}
+* html .btn span, * html .btn i {
+background-image:none;
+cursor:pointer;
+float:left;
+width:auto;
+}
+.btn.blue {
+background:none repeat scroll 0 0 #0071AD;
+}
+.btn.green {
+background:none repeat scroll 0 0 #99DD44;
+}
+.btn.pink {
+background:none repeat scroll 0 0 #EE11AA;
+}
+.btn:hover {
+background-color:#0C144B;
+}
+.btn:active {
+background-color:#444444;
+}
+.btn[class] {
+background-image:url("http://monc.se/kitchen/stew/buttons/shade.png");
+background-position:center bottom;
+}
+* html .btn {
+border:3px double #AAAAAA;
+}
+* html .btn.blue {
+border-color:#22AAEE;
+}
+* html .btn.green {
+border-color:#99DD44;
+}
+* html .btn.pink {
+border-color:#EE11AA;
+}
+* html .btn:hover {
+border-color:#AA0000;
+}
+p {
+clear:both;
+padding-bottom:2em;
+}
+form {
+margin-top:2em;
+}
+form p .btn {
+margin-right:1em;
+}
+textarea {
+margin:1em 0;
+}
+

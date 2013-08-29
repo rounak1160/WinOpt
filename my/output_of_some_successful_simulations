@@ -1,0 +1,246 @@
+abhishek@abhishek:/var/www/winopt/my$ java -classpath genopt.jar genopt.GenOptptLinux1.ini
+_______________________________________________________________
+
+GenOpt(R) 3.1.0, December 8, 2011
+
+GenOpt Copyright (c) 1998-2011, The Regents of the
+University of California, through Lawrence Berkeley
+National Laboratory (subject to receipt of any 
+		required approvals from the U.S. Dept. of Energy).
+All rights reserved.
+
+The development of GenOpt is supported by
+the U.S. Department of Energy (DOE),
+    the Swiss Academy of Engineering Sciences (SATW),
+    the Swiss National Energy Fund (NEFF), and
+    the Swiss National Science Foundation (SNSF).
+
+    Developed by
+    Lawrence Berkeley National Laboratory
+    http://simulationresearch.lbl.gov
+    Michael Wetter, MWetter@lbl.gov
+
+    _______________________________________________________________
+    Assigning 4 threads for simulations.
+    Initialize.
+    Simulation 1: Es_tot	= 2.318462085318036E10
+    Simulation 1: Es_heat	= 3.10973158782108E7
+    Simulation 1: Es_cool	= 2.27259087377352E10
+    Simulation 1: Es_light	= 4.27614799566946E8
+    Simulation 1: Q_heat	= 3.10973158782108E7
+    Simulation 1: Q_cool	= 2.27259087377352E10
+    Simulation 1: E_lights	= 4.27614799566946E8
+    Perform global search.
+    Simulation 2: Es_tot	= 2.3440990762843742E10
+    Simulation 2: Es_heat	= 3.23367413422377E7
+    Simulation 2: Es_cool	= 2.29827539293743E10
+    Simulation 2: Es_light	= 4.25900092127205E8
+    Simulation 2: Q_heat	= 3.23367413422377E7
+    Simulation 2: Q_cool	= 2.29827539293743E10
+    Simulation 2: E_lights	= 4.25900092127205E8
+    Simulation 3: Es_tot	= 2.226826335110297E10
+    Simulation 3: Es_heat	= 3.94678851928904E7
+    Simulation 3: Es_cool	= 2.18023903149839E10
+    Simulation 3: Es_light	= 4.26405150926183E8
+    Simulation 3: Q_heat	= 3.94678851928904E7
+    Simulation 3: Q_cool	= 2.18023903149839E10
+    Simulation 3: E_lights	= 4.26405150926183E8
+    Update Parameter.
+    Iteration step reduced cost.
+    Perform global search.
+    Unfeasible iterate.
+    Unfeasible iterate.
+    Perform local search.
+    Unfeasible iterate.
+    Update Parameter.
+    Iteration step did not reduce cost.
+    Iteration step did not reduce cost. Reduce step size to '0.5'.
+    Perform global search.
+    Simulation 4: Es_tot	= 2.276437347209992E10
+    Simulation 4: Es_heat	= 3.84027793666233E7
+    Simulation 4: Es_cool	= 2.22979149411472E10
+    Simulation 4: Es_light	= 4.28055751586095E8
+    Simulation 4: Q_heat	= 3.84027793666233E7
+    Simulation 4: Q_cool	= 2.22979149411472E10
+    Simulation 4: E_lights	= 4.28055751586095E8
+    Unfeasible iterate.
+    Perform local search.
+    Unfeasible iterate.
+    Update Parameter.
+    Iteration step did not reduce cost.
+    Iteration step did not reduce cost. Reduce step size to '0.25'.
+    Perform global search.
+    Simulation 5: Es_tot	= 2.245798971182994E10
+    Simulation 5: Es_heat	= 3.99242813874812E7
+    Simulation 5: Es_cool	= 2.19896409722372E10
+    Simulation 5: Es_light	= 4.28424458205259E8
+    Simulation 5: Q_heat	= 3.99242813874812E7
+    Simulation 5: Q_cool	= 2.19896409722372E10
+    Simulation 5: E_lights	= 4.28424458205259E8
+    Unfeasible iterate.
+    Perform local search.
+    Unfeasible iterate.
+    Update Parameter.
+    Iteration step did not reduce cost.
+    Iteration step did not reduce cost. Reduce step size to '0.125'.
+    Perform global search.
+    Simulation 6: Es_tot	= 2.2324450241877693E10
+    Simulation 6: Es_heat	= 3.94233076683207E7
+    Simulation 6: Es_cool	= 2.18570452981636E10
+    Simulation 6: Es_light	= 4.27981636045771E8
+    Simulation 6: Q_heat	= 3.94233076683207E7
+    Simulation 6: Q_cool	= 2.18570452981636E10
+    Simulation 6: E_lights	= 4.27981636045771E8
+    Unfeasible iterate.
+    Perform local search.
+    Unfeasible iterate.
+    Update Parameter.
+    Iteration step did not reduce cost.
+    Iteration step did not reduce cost. Reduce step size to '0.0625'.
+    Perform global search.
+    Simulation 7: Es_tot	= 2.2284370904267487E10
+    Simulation 7: Es_heat	= 3.93783636299988E7
+    Simulation 7: Es_cool	= 2.18178872138981E10
+    Simulation 7: Es_light	= 4.27105326739386E8
+    Simulation 7: Q_heat	= 3.93783636299988E7
+    Simulation 7: Q_cool	= 2.18178872138981E10
+    Simulation 7: E_lights	= 4.27105326739386E8
+    Unfeasible iterate.
+    Perform local search.
+    Unfeasible iterate.
+    Update Parameter.
+    Iteration step did not reduce cost.
+
+
+    Minimum: f(x*) = 2.226826335110297E10
+
+    Required accuracy is reached.
+    GenOpt completed successfully.
+    abhishek@abhishek:/var/www/winopt/my$ =========COMMAND ENDS HERE===============SCRIPT EXECUTED!welcome againGOT THE MESSAGE
+    got data from mycallserver.php
+    ookkk going to run genopt now
+    ./myexecute.sh
+    ========COMMAND STARTS HERE========./myexecute.sh
+    _______________________________________________________________
+
+    GenOpt(R) 3.1.0, December 8, 2011
+
+    GenOpt Copyright (c) 1998-2011, The Regents of the
+    University of California, through Lawrence Berkeley
+    National Laboratory (subject to receipt of any 
+		    required approvals from the U.S. Dept. of Energy).
+    All rights reserved.
+
+    The development of GenOpt is supported by
+    the U.S. Department of Energy (DOE),
+    the Swiss Academy of Engineering Sciences (SATW),
+    the Swiss National Energy Fund (NEFF), and
+    the Swiss National Science Foundation (SNSF).
+
+    Developed by
+    Lawrence Berkeley National Laboratory
+    http://simulationresearch.lbl.gov
+    Michael Wetter, MWetter@lbl.gov
+
+    _______________________________________________________________
+    Assigning 4 threads for simulations.
+    Initialize.
+    Simulation 1: Es_tot	= 2.9825277569805275E10
+    Simulation 1: Es_heat	= 1.43622476818333E7
+    Simulation 1: Es_cool	= 2.93964087494075E10
+    Simulation 1: Es_light	= 4.14506572715937E8
+    Simulation 1: Q_heat	= 1.43622476818333E7
+    Simulation 1: Q_cool	= 2.93964087494075E10
+    Simulation 1: E_lights	= 4.14506572715937E8
+    Perform global search.
+    Simulation 2: Es_tot	= 3.052067438899337E10
+    Simulation 2: Es_heat	= 1.62794242634062E7
+    Simulation 2: Es_cool	= 3.00906445611054E10
+    Simulation 2: Es_light	= 4.13750403624566E8
+    Simulation 2: Q_heat	= 1.62794242634062E7
+    Simulation 2: Q_cool	= 3.00906445611054E10
+    Simulation 2: E_lights	= 4.13750403624566E8
+    Simulation 3: Es_tot	= 2.688815550887331E10
+    Simulation 3: Es_heat	= 3.00580003774403E7
+    Simulation 3: Es_cool	= 2.64440138746877E10
+    Simulation 3: Es_light	= 4.14083633808171E8
+    Simulation 3: Q_heat	= 3.00580003774403E7
+    Simulation 3: Q_cool	= 2.64440138746877E10
+    Simulation 3: E_lights	= 4.14083633808171E8
+    Simulation 4: Es_tot	= 2.865266689057167E10
+    Simulation 4: Es_heat	= 2.64461826884387E7
+    Simulation 4: Es_cool	= 2.82129307410417E10
+    Simulation 4: Es_light	= 4.13289966841534E8
+    Simulation 4: Q_heat	= 2.64461826884387E7
+    Simulation 4: Q_cool	= 2.82129307410417E10
+    Simulation 4: E_lights	= 4.13289966841534E8
+    Simulation 5: Es_tot	= 2.5115832597280754E10
+    Simulation 5: Es_heat	= 3.3627496110417E7
+    Simulation 5: Es_cool	= 2.46667930782795E10
+    Simulation 5: Es_light	= 4.15412022890838E8
+    Simulation 5: Q_heat	= 3.3627496110417E7
+    Simulation 5: Q_cool	= 2.46667930782795E10
+    Simulation 5: E_lights	= 4.15412022890838E8
+    Update Parameter.
+    Iteration step reduced cost.
+    Perform global search.
+    Unfeasible iterate.
+    Unfeasible iterate.
+    Simulation 6: Es_tot	= 2.3301784616202198E10
+    Simulation 6: Es_heat	= 3.78822804246151E7
+    Simulation 6: Es_cool	= 2.28467975393645E10
+    Simulation 6: Es_light	= 4.17104796413085E8
+    Simulation 6: Q_heat	= 3.78822804246151E7
+    Simulation 6: Q_cool	= 2.28467975393645E10
+    Simulation 6: E_lights	= 4.17104796413085E8
+    Simulation 7: Es_tot	= 2.1437207831295574E10
+    Simulation 7: Es_heat	= 4.1984783612993E7
+    Simulation 7: Es_cool	= 2.09664797794488E10
+    Simulation 7: Es_light	= 4.28743268233785E8
+    Simulation 7: Q_heat	= 4.1984783612993E7
+    Simulation 7: Q_cool	= 2.09664797794488E10
+    Simulation 7: E_lights	= 4.28743268233785E8
+    Update Parameter.
+    Iteration step reduced cost.
+    Perform global search.
+    Unfeasible iterate.
+    Unfeasible iterate.
+    Unfeasible iterate.
+    Unfeasible iterate.
+    **** Info ****
+    Simulation 8: Caught 'java.lang.Exception' with message:   
+    Exception in executing the simulation program
+
+    Simulation working directory : '/var/www/winopt/my/tmp-genopt-run-8'
+    Command string               : 'runenergyplus /var/www/winopt/my/tmp-genopt-run-8/tutorial /home/abhishek/Desktop/energy+/IND_Hyderabad.431280_ISHRAE.epw'
+    Exception message: 
+
+    Error in executing the simulation program
+    Exit value of the simulation program: 1
+    Working directory                   : '/var/www/winopt/my/tmp-genopt-run-8'.
+    Current command String              : 'runenergyplus /var/www/winopt/my/tmp-genopt-run-8/tutorial /home/abhishek/Desktop/energy+/IND_Hyderabad.431280_ISHRAE.epw'.
+    Error stream of simulation program  : EnergyPlus Terminated--Error(s) Detected.
+
+
+       Try to evaluate simulation a second time.
+
+       java.lang.Exception: 
+
+       Exception in executing the simulation program
+
+       Simulation working directory : '/var/www/winopt/my/tmp-genopt-run-8'
+       Command string               : 'runenergyplus /var/www/winopt/my/tmp-genopt-run-8/tutorial /home/abhishek/Desktop/energy+/IND_Hyderabad.431280_ISHRAE.epw'
+       Exception message: 
+
+       Error in executing the simulation program
+       Exit value of the simulation program: 1
+       Working directory                   : '/var/www/winopt/my/tmp-genopt-run-8'.
+       Current command String              : 'runenergyplus /var/www/winopt/my/tmp-genopt-run-8/tutorial /home/abhishek/Desktop/energy+/IND_Hyderabad.431280_ISHRAE.epw'.
+       Error stream of simulation program  : EnergyPlus Terminated--Error(s) Detected.
+
+
+
+       GenOpt terminated with error.
+       See logfile for further information.
+       i am .sh file and i am done
+

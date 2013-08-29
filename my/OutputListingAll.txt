@@ -1,0 +1,20 @@
+GenOpt(R) Version 3.1.0, December 8, 2011
+
+Lawrence Berkeley National Laboratory
+http://simulationresearch.lbl.gov
+Michael Wetter, MWetter@lbl.gov
+
+GenOpt Copyright (c) 1998-2011, The Regents of the
+University of California, through Lawrence Berkeley
+National Laboratory (subject to receipt of any 
+required approvals from the U.S. Dept. of Energy).
+All rights reserved.
+_______________________________________________________________
+
+Results of GPSPSOCCHJ algorithm
+Start time: Tue Jul 16 23:07:12 IST 2013
+
+All Iterations
+
+
+Simulation Number	Main Iteration	Sub Iteration	Step Number	Es_tot	Es_heat	Es_cool	Es_light	Q_heat	Q_cool	E_lights	azimuth_angle	wwr_height	shgc

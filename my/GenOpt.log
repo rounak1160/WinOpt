@@ -1,0 +1,41 @@
+GenOpt(R) Optimization Version 3.1.0, December 8, 2011
+
+Lawrence Berkeley National Laboratory
+http://simulationresearch.lbl.gov
+Michael Wetter, MWetter@lbl.gov
+
+GenOpt Copyright (c) 1998-2011, The Regents of the
+University of California, through Lawrence Berkeley
+National Laboratory (subject to receipt of any 
+required approvals from the U.S. Dept. of Energy).
+All rights reserved.
+
+The development of GenOpt is supported by
+the U.S. Department of Energy (DOE),
+the Swiss Academy of Engineering Sciences (SATW),
+the Swiss National Energy Fund (NEFF), and
+the Swiss National Science Foundation (SNSF).
+_______________________________________________________________
+
+Configuration file : /var/www/my/optLinux1.ini
+Command file       : /var/www/my/command.txt
+
+Optimization started  at : Tue Jul 16 23:07:12 IST 2013
+Optimization finished at : Tue Jul 16 23:07:12 IST 2013
+Execution time           :            00:00:00
+_______________________________________________________________
+
+Optimization terminated with error.
+
+Error message:
+**************
+java.lang.Exception: 
+
+Exception in executing the simulation program
+
+Simulation working directory : '/var/www/my/tmp-genopt-run-1'
+Command string               : 'runenergyplus /var/www/my/tmp-genopt-run-1/tutorial Hyderabad.epw'
+Exception message: 
+Cannot run program "runenergyplus" (in directory "/var/www/my/tmp-genopt-run-1"): error=2, No such file or directory
+
+GenOpt terminated with error.

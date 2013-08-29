@@ -1,0 +1,141 @@
+Program Version,EnergyPlus, Linux, VERSION 7.1.0.012, YMD=2013.06.26 19:04
+! This file shows details about the branches, nodes, and other
+! elements of the flow connections.
+! This file is intended for use in "debugging" potential problems
+! that may also be detected by the program, but may be more easily
+! identified by "eye".
+! This file is also intended to support software which draws a
+! schematic diagram of the HVAC system.
+! ===============================================================
+! #Nodes,<Number of Unique Nodes>
+ #Nodes,10                  
+! <Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Node,1,TESTZONE PTAC OUTSIDE AIR INLET,Air,1
+ Node,2,TESTZONE PTAC COOLING COIL CONDENSER INLET,Air,1
+ Node,3,TESTZONE ZONE AIR NODE,Air,0
+ Node,4,TESTZONE RETURN OUTLET,Air,0
+ Node,5,TESTZONE PTAC SUPPLY INLET,Air,2
+ Node,6,TESTZONE PTAC RETURN,Air,2
+ Node,7,TESTZONE PTAC MIXED AIR OUTLET,Air,1
+ Node,8,TESTZONE PTAC RELIEF AIR OUTLET,Air,0
+ Node,9,TESTZONE PTAC HEATING COIL OUTLET,Air,1
+ Node,10,TESTZONE PTAC COOLING COIL OUTLET,Air,1
+! ===============================================================
+! Suspicious nodes have 0 references.  It is normal for some nodes, however.
+! Listing nodes with 0 references (culled from previous list):
+! <Suspicious Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Suspicious Node,3,TESTZONE ZONE AIR NODE,Air,0
+ Suspicious Node,4,TESTZONE RETURN OUTLET,Air,0
+ Suspicious Node,8,TESTZONE PTAC RELIEF AIR OUTLET,Air,0
+! ===============================================================
+! <#Branch Lists>,<Number of Branch Lists>
+ #Branch Lists,0
+! <Branch List>,<Branch List Count>,<Branch List Name>,<Loop Name>,<Loop Type>,<Number of Branches>
+! <Branch>,<Branch Count>,<Branch Name>,<Loop Name>,<Loop Type>,<Branch Inlet Node Name>,<Branch Outlet Node Name>
+! ===============================================================
+! <#Supply Air Paths>,<Number of Supply Air Paths>
+ #Supply Air Paths,0
+! <Supply Air Path>,<Supply Air Path Count>,<Supply Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Supply Air Path>,<Number of Components>
+! <Supply Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Outlet Nodes on Supply Air Path Component>,<Number of Nodes>
+! <Supply Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! <#Return Air Paths>,<Number of Return Air Paths>
+ #Return Air Paths,0
+! <Return Air Path>,<Return Air Path Count>,<Return Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Return Air Path>,<Number of Components>
+! <Return Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Inlet Nodes on Return Air Path Component>,<Number of Nodes>
+! <Return Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! #Outdoor Air Nodes,<Number of Outdoor Air Nodes>
+ #Outdoor Air Nodes,2                   
+! <Outdoor Air Node>,<NodeNumber>,<Node Name>
+ Outdoor Air Node,1,TESTZONE PTAC OUTSIDE AIR INLET
+ Outdoor Air Node,2,TESTZONE PTAC COOLING COIL CONDENSER INLET
+! ===============================================================
+! <#Component Sets>,<Number of Component Sets>
+ #Component Sets,4
+! <Component Set>,<Component Set Count>,<Parent Object Type>,<Parent Object Name>,<Component Type>,<Component Name>,<Inlet Node ID>,<Outlet Node ID>,<Description>
+ Component Set,1,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,TESTZONE PTAC,OUTDOORAIR:MIXER,TESTZONE PTAC OA MIXING BOX,TESTZONE PTAC OUTSIDE AIR INLET,TESTZONE PTAC MIXED AIR OUTLET,Air Nodes
+ Component Set,2,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,TESTZONE PTAC,FAN:ONOFF,TESTZONE PTAC SUPPLY FAN,TESTZONE PTAC HEATING COIL OUTLET,TESTZONE PTAC SUPPLY INLET,Air Nodes
+ Component Set,3,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,TESTZONE PTAC,COIL:HEATING:ELECTRIC,TESTZONE PTAC HEATING COIL,TESTZONE PTAC COOLING COIL OUTLET,TESTZONE PTAC HEATING COIL OUTLET,Air Nodes
+ Component Set,4,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,TESTZONE PTAC,COIL:COOLING:DX:SINGLESPEED,TESTZONE PTAC COOLING COIL,TESTZONE PTAC MIXED AIR OUTLET,TESTZONE PTAC COOLING COIL OUTLET,Air Nodes
+! ===============================================================
+! <# Plant Loops>,<Number of Plant Loops>
+ #Plant Loops,0
+! <Plant Loop>,<Plant Loop Name>,<Loop Type>,<Inlet Node Name>,<Outlet Node Name>,<Branch List>,<Connector List>
+! <Plant Loop Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <Plant Loop Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <Plant Loop Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! <Plant Loop Supply Connection>,<Plant Loop Name>,<Supply Side Outlet Node Name>,<Demand Side Inlet Node Name>
+! <Plant Loop Return Connection>,<Plant Loop Name>,<Demand Side Outlet Node Name>,<Supply Side Inlet Node Name>
+! ===============================================================
+! <# Condenser Loops>,<Number of Condenser Loops>
+ #Condenser Loops,0
+! <Condenser Loop>,<Condenser Loop Name>,<Loop Type>,<Inlet Node Name>,<Outlet Node Name>,<Branch List>,<Connector List>
+! <Condenser Loop Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <Condenser Loop Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <Condenser Loop Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! <Condenser Loop Supply Connection>,<Condenser Loop Name>,<Supply Side Outlet Node Name>,<Demand Side Inlet Node Name>
+! <Condenser Loop Return Connection>,<Condenser Loop Name>,<Demand Side Outlet Node Name>,<Supply Side Inlet Node Name>
+! ===============================================================
+! <# Controlled Zones>,<Number of Controlled Zones>
+ #Controlled Zones,1
+! <Controlled Zone>,<Controlled Zone Name>,<Equip List Name>,<Control List Name>,<Zone Node Name>,<Return Air Node Name>,<# Inlet Nodes>,<# Exhaust Nodes>
+! <Controlled Zone Inlet>,<Inlet Node Count>,<Controlled Zone Name>,<Supply Air Inlet Node Name>,<SD Sys:Cooling/Heating [DD:Cooling] Inlet Node Name>,<DD Sys:Heating Inlet Node Name>
+! <Controlled Zone Exhaust>,<Exhaust Node Count>,<Controlled Zone Name>,<Exhaust Air Node Name>
+ Controlled Zone,TESTZONE,TESTZONE EQUIPMENT,,TESTZONE ZONE AIR NODE,TESTZONE RETURN OUTLET,1,1
+   Controlled Zone Inlet,1,TESTZONE,TESTZONE PTAC SUPPLY INLET,Undefined,N/A
+   Controlled Zone Exhaust,1,TESTZONE,TESTZONE PTAC RETURN
+! ===============================================================
+! <#Zone Equipment Lists>,<Number of Zone Equipment Lists>
+ #Zone Equipment Lists,1
+! <Zone Equipment List>,<Zone Equipment List Count>,<Zone Equipment List Name>,<Zone Name>,<Number of Components>
+! <Zone Equipment Component>,<Component Count>,<Component Type>,<Component Name>,<Zone Name>,<Heating Priority>,<Cooling Priority>
+ Zone Equipment List,1,TESTZONE EQUIPMENT,TESTZONE,1
+   Zone Equipment Component,1,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,TESTZONE PTAC,TESTZONE,1,1
+! ===============================================================
+! <#Dual Duct Damper Connections>,<Number of Dual Duct Damper Connections>
+ #Dual Duct Damper Connections,0
+! <Dual Duct Damper>,<Dual Duct Damper Count>,<Dual Duct Damper Name>,<Inlet Node>,<Outlet Node>,<Inlet Node Type>,<AirLoopHVAC Name>
+! ===============================================================
+! <#AirLoopHVACs>,<Number of AirLoopHVACs>
+ #AirLoopHVACs,0
+! <AirLoopHVAC>,<Air Loop Name>,<# Return Nodes>,<# Supply Nodes>,<# Zones Cooled>,<# Zones Heated>,<Outdoor Air Used>
+! <AirLoop Return Connections>,<Connection Count>,<AirLoopHVAC Name>,<Zn Eqp Return Node #>,<Zn Eqp Return Node Name>,<AirLoop Return Node #>,<Air Loop Return Node Name>
+! <AirLoop Supply Connections>,<Connection Count>,<AirLoopHVAC Name>,<Zn Eqp Supply Node #>,<Zn Eqp Supply Node Name>,<AirLoop Supply Node #>,<Air Loop Supply Node Name>
+! <Cooled Zone Info>,<Cooled Zone Count>,<Cooled Zone Name>,<Cooled Zone Inlet Node #>,<Cooled Zone Inlet Node Name>,<AirLoopHVAC Name>
+! <Heated Zone Info>,<Heated Zone Count>,<Heated Zone Name>,<Heated Zone Inlet Node #>,<Heated Zone Inlet Node Name>,<AirLoopHVAC Name>
+! <Outdoor Air Connections>,<OA Inlet Node #>,<OA Return Air Inlet Node Name>,<OA Outlet Node #>,<OA Mixed Air Outlet Node Name>,<AirLoopHVAC Name>
+! <AirLoopHVAC Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <AirLoopHVAC Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <AirLoopHVAC Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! ===============================================================
+! <#Parent Node Connections>,<Number of Parent Node Connections>
+ #Parent Node Connections,2
+! <Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
+ Parent Node Connection,TESTZONE PTAC RETURN,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,TESTZONE PTAC,Inlet,1
+ Parent Node Connection,TESTZONE PTAC SUPPLY INLET,ZONEHVAC:PACKAGEDTERMINALAIRCONDITIONER,TESTZONE PTAC,Outlet,1
+! ===============================================================
+! <#Non-Parent Node Connections>,<Number of Non-Parent Node Connections>
+ #Non-Parent Node Connections,17
+! <Non-Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
+ Non-Parent Node Connection,TESTZONE PTAC OUTSIDE AIR INLET,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,1
+ Non-Parent Node Connection,TESTZONE PTAC COOLING COIL CONDENSER INLET,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,2
+ Non-Parent Node Connection,TESTZONE ZONE AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,TESTZONE,ZoneNode,1
+ Non-Parent Node Connection,TESTZONE RETURN OUTLET,ZONEHVAC:EQUIPMENTCONNECTIONS,TESTZONE,ZoneReturn,1
+ Non-Parent Node Connection,TESTZONE PTAC SUPPLY INLET,ZONEHVAC:EQUIPMENTCONNECTIONS,TESTZONE,ZoneInlet,1
+ Non-Parent Node Connection,TESTZONE PTAC RETURN,ZONEHVAC:EQUIPMENTCONNECTIONS,TESTZONE,ZoneExhaust,1
+ Non-Parent Node Connection,TESTZONE PTAC MIXED AIR OUTLET,OUTDOORAIR:MIXER,TESTZONE PTAC OA MIXING BOX,Outlet,1
+ Non-Parent Node Connection,TESTZONE PTAC OUTSIDE AIR INLET,OUTDOORAIR:MIXER,TESTZONE PTAC OA MIXING BOX,Inlet,1
+ Non-Parent Node Connection,TESTZONE PTAC RELIEF AIR OUTLET,OUTDOORAIR:MIXER,TESTZONE PTAC OA MIXING BOX,ReliefAir,1
+ Non-Parent Node Connection,TESTZONE PTAC RETURN,OUTDOORAIR:MIXER,TESTZONE PTAC OA MIXING BOX,Inlet,1
+ Non-Parent Node Connection,TESTZONE PTAC HEATING COIL OUTLET,FAN:ONOFF,TESTZONE PTAC SUPPLY FAN,Inlet,1
+ Non-Parent Node Connection,TESTZONE PTAC SUPPLY INLET,FAN:ONOFF,TESTZONE PTAC SUPPLY FAN,Outlet,1
+ Non-Parent Node Connection,TESTZONE PTAC COOLING COIL OUTLET,COIL:HEATING:ELECTRIC,TESTZONE PTAC HEATING COIL,Inlet,1
+ Non-Parent Node Connection,TESTZONE PTAC HEATING COIL OUTLET,COIL:HEATING:ELECTRIC,TESTZONE PTAC HEATING COIL,Outlet,1
+ Non-Parent Node Connection,TESTZONE PTAC MIXED AIR OUTLET,COIL:COOLING:DX:SINGLESPEED,TESTZONE PTAC COOLING COIL,Inlet,1
+ Non-Parent Node Connection,TESTZONE PTAC COOLING COIL OUTLET,COIL:COOLING:DX:SINGLESPEED,TESTZONE PTAC COOLING COIL,Outlet,1
+ Non-Parent Node Connection,TESTZONE PTAC COOLING COIL CONDENSER INLET,COIL:COOLING:DX:SINGLESPEED,TESTZONE PTAC COOLING COIL,OutsideAirReference,1

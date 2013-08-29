@@ -1,0 +1,56 @@
+Vary{
+  Parameter{ // solar, visible, and thermal transmittance of shading device
+  Name    = azimuth_angle;
+  Min     = 0;
+  Ini     = 90;
+  Max     = 360;
+  Step    = 90;
+  }
+  Parameter{ // solar, visible, and thermal transmittance of shading device
+  Name    = wwr_height;
+  Min     = 0.6;
+  Ini     = 1.2;
+  Max     = 2.4;
+  Step    = 0.3;
+  }
+  Function{
+  Name    = wwr_startz;
+  Function="subtract(1.5,multiply(%wwr_height%,0.5))";
+  }
+  Parameter{ // solar, visible, and thermal transmittance of shading device
+  Name    = shgc;
+  Ini     = 1;
+  Values = "0.25";
+  }
+  Function{
+  Name = u_factor;
+  Function = "find_u_factor(%shgc%)";
+  }
+  Function{
+  Name = vlt;
+  Function = "find_vlt(%shgc%)";
+  }
+}
+OptimizationSettings{
+MaxIte = 2000;
+MaxEqualResults = 100;
+WriteStepNumber = false;
+}
+
+Algorithm{
+  Main = GPSPSOCCHJ;
+  NeighborhoodTopology = vonNeumann;
+  NeighborhoodSize = 5;
+  NumberOfParticle = 10;
+  NumberOfGeneration = 10;
+  Seed = 1;
+  CognitiveAcceleration = 2.8;
+  SocialAcceleration = 1.3;
+  MaxVelocityGainContinuous = 0.5;
+  MaxVelocityDiscrete = 4;
+  ConstrictionGain = 0.5;
+  MeshSizeDivider = 2;
+  InitialMeshSizeExponent = 0;
+  MeshSizeExponentIncrement = 1;
+  NumberOfStepReduction = 4;
+}

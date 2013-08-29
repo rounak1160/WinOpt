@@ -1,0 +1,144 @@
+Program Version,EnergyPlus, Linux, VERSION 7.1.0.012, YMD=2013.06.26 19:04
+! <Version>, Version ID
+ Version, 7.1
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  6, 10
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations,  Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation
+ Simulation Control, Yes, Yes, No, Yes, Yes
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Time Cooling Setpoint Not Met
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>, Months From Jan to Dec {Deg C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>, Months From Jan to Dec {Deg C}
+ Site:GroundTemperature:FCfactorMethod,  21.67,  22.63,  24.48,  26.23,  29.54,  31.29,  31.77,  30.88,  28.84,  26.29,  23.78,  22.13
+! <Site:GroundTemperature:Shallow>, Months From Jan to Dec {Deg C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>, Months From Jan to Dec {Deg C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>, Months From Jan to Dec {dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>, Months From Jan to Dec {dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>, Months From Jan to Dec {dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient [Internal],Temperature Modifier Coefficient [Internal]
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Hyderabad Andhra Pradesh IND ISHRAE WMO#=431280,17.45,78.47,5.50,545.00,94947,1.1285
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,Building,0.000,Suburbs,4.00000E-002,0.40000,FullExterior,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Solution Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CONDFD - ConductionFiniteDifference | CONDFDSimple - Conduction Finite Difference Simplified | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}
+Solution Algorithm, ConductionTransferFunction,200
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Contaminant Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.220,370.000,6.500000E-003
+! <SurfaceGeometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,LowerLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,2
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,1,10,4
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, TESTZONE,0.0,0.00,0.00,0.00,2.50,2.50,1.50,1,1,1,-3.06E-016,5.00,-1.12E-032,5.00,0.00,3.00,3.00,75.00,TARP,DOE-2,25.00,60.00,52.00,8.00,6,4,2,Yes
+! <Zone Internal Gains/Equipment Information - Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains, TESTZONE,25.00,4.0,6.250,0.160,5.000,10.000,0.000,0.000,0.000,0.000,15.000,No
+! <People Internal Gains - Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate 
+ People Internal Gains, OCCUPANCY_LOAD,INTERNAL LOAD SCH,TESTZONE,25.00,4.0,4.0,0.160,6.250,0.100,0.900,AutoCalculate,ACTIVITY LEVEL,No,3.8200E-008
+! <Lights Internal Gains - Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,EndUse Category
+ Lights Internal Gains, INTERNAL LIGHTING_LOAD,INTERNAL LOAD SCH,TESTZONE,25.00,4.0,125.000,5.000,31.250,0.000,0.420,0.180,0.400,1.000,General
+! <ElectricEquipment Internal Gains - Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,EndUse SubCategory
+ ElectricEquipment Internal Gains, INTERNAL EQUIPMENTS_LOAD,INTERNAL LOAD SCH,TESTZONE,25.00,4.0,250.000,10.000,62.500,0.000,0.300,0.000,0.700,General
+! <Shadowing/Sun Position Calculations> [Annual Simulations], Value {days}, Allowable Number Figures in Shadow Overlap {}, Polygon Clipping Algorithm, Sky Diffuse Modeling Algorithm
+Shadowing/Sun Position Calculations,20,15000,SutherlandHodgman,SimpleSkyDiffuseModeling
+! <Zone/Window Adjacency Daylighting Counts>, Zone Name, Number of Exterior Windows, Number of Exterior Windows in Adjacent Zones
+Zone/Window Adjacency Daylighting Counts, TESTZONE,4,0
+! <Zone/Window Adjacency Daylighting Matrix>, Zone Name, Number of Adjacent Zones with Windows,Adjacent Zone Names - 1st 100 (max)
+Zone/Window Adjacency Daylighting Matrix, TESTZONE,0,
+! <Sky Daylight Factors>, MonthAndDay, Zone Name, Window Name, Daylight Fac: Ref Pt #1, Daylight Fac: Ref Pt #2
+ Clear Sky Daylight Factors,01/21,TESTZONE,NORTH_WINDOW,9.7892E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/21,TESTZONE,NORTH_WINDOW,7.6762E-003,0.0000
+ Intermediate Sky Daylight Factors,01/21,TESTZONE,NORTH_WINDOW,4.9751E-003,0.0000
+ Overcast Sky Daylight Factors,01/21,TESTZONE,NORTH_WINDOW,8.1578E-003,0.0000
+ Clear Sky Daylight Factors,01/21,TESTZONE,SOUTH_WINDOW,1.0926E-002,0.0000
+ Clear Turbid Sky Daylight Factors,01/21,TESTZONE,SOUTH_WINDOW,1.0609E-002,0.0000
+ Intermediate Sky Daylight Factors,01/21,TESTZONE,SOUTH_WINDOW,7.2944E-003,0.0000
+ Overcast Sky Daylight Factors,01/21,TESTZONE,SOUTH_WINDOW,3.6793E-003,0.0000
+ Clear Sky Daylight Factors,01/21,TESTZONE,EAST_WINDOW,8.2174E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/21,TESTZONE,EAST_WINDOW,7.2540E-003,0.0000
+ Intermediate Sky Daylight Factors,01/21,TESTZONE,EAST_WINDOW,6.3113E-003,0.0000
+ Overcast Sky Daylight Factors,01/21,TESTZONE,EAST_WINDOW,5.4137E-003,0.0000
+ Clear Sky Daylight Factors,01/21,TESTZONE,WEST_WINDOW,7.1928E-003,0.0000
+ Clear Turbid Sky Daylight Factors,01/21,TESTZONE,WEST_WINDOW,6.0729E-003,0.0000
+ Intermediate Sky Daylight Factors,01/21,TESTZONE,WEST_WINDOW,5.1242E-003,0.0000
+ Overcast Sky Daylight Factors,01/21,TESTZONE,WEST_WINDOW,5.4137E-003,0.0000
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,TESTZONE,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,    6
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.0000    
+ Heating Sizing Factor Information, Zone TESTZONE,   1.2000    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.0000    
+ Cooling Sizing Factor Information, Zone TESTZONE,   1.2000    
+! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}
+ Zone Sizing Information, TESTZONE, Cooling, 4528.78179, 5434.53815, 0.39362, 0.47235, SUMMER DESIGN, 7/21 17:10:00, 44.32367, 8.61258E-003, 25.00000, 4.00000, 0.28776
+ Zone Sizing Information, TESTZONE, Heating, 3694.21300, 4433.05560, 0.10055, 0.28776, WINTER DESIGN, 1/21 09:00:00, 10.00000, 1.00000E-005, 25.00000, 4.00000, 0.28776
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, ZoneHVAC:PackagedTerminalAirConditioner, TESTZONE PTAC, Supply Air Flow Rate During Cooling Operation [m3/s], 0.47235
+ Component Sizing Information, ZoneHVAC:PackagedTerminalAirConditioner, TESTZONE PTAC, Supply Air Flow Rate During Heating Operation [m3/s], 0.47235
+ Component Sizing Information, ZoneHVAC:PackagedTerminalAirConditioner, TESTZONE PTAC, Outdoor Air Flow Rate During Cooling Operation [m3/s], 0.28776
+ Component Sizing Information, ZoneHVAC:PackagedTerminalAirConditioner, TESTZONE PTAC, Outdoor Air Flow Rate During Heating Operation [m3/s], 0.28776
+ Component Sizing Information, ZoneHVAC:PackagedTerminalAirConditioner, TESTZONE PTAC, Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, TESTZONE PTAC COOLING COIL, Rated Air Flow Rate [m3/s], 0.47235
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, TESTZONE PTAC COOLING COIL, Rated Total Cooling Capacity (gross) [W], 11729.52715
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, TESTZONE PTAC COOLING COIL, Rated Sensible Heat Ratio, 0.67608
+! <DX Cooling Coil Standard Rating Information>, Component Type, Component Name, Standard Rating (Net) Cooling Capacity {W}, SEER in SI Units {W/W}, SEER in IP Units {Btu/W-h}, EER in SI Units {W/W}, EER in IP Units {Btu/W-h}, IEER in SI Units {W/W}, IEER in IP Units {Btu/W-h}
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, TESTZONE PTAC COOLING COIL, 11362.4, 2.82, 9.63, 2.66, 9.07, 2.79, 9.52
+ Component Sizing Information, Coil:Heating:Electric, TESTZONE PTAC HEATING COIL, Nominal Capacity [W], 13245.53244
+ Component Sizing Information, Fan:OnOff, TESTZONE PTAC SUPPLY FAN, Maximum Flow Rate [m3/s], 0.47235
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,WINTER DESIGN,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+! <Environment:Design Day Data>, Max Dry-Bulb Temp {C}, Temp Range {dC}, Temp Range Ind Type, Hum Ind Value at Max Temp, Hum Ind Type,Pressure {Pa}, Wind Direction {deg CW from N}, Wind Speed {m/s}, Clearness, Rain, Snow
+! <Environment:Design_Day_Misc>,DayOfYear,ASHRAE A Coeff,ASHRAE B Coeff,ASHRAE C Coeff,Solar Constant-Annual Variation,Eq of Time {minutes}, Solar Declination Angle {deg}, Solar Model
+Environment:Design Day Data,10.00,0.00,DefaultMultipliers,99063,270,4.9,0.00,No ,No 
+Environment:Design_Day_Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  6
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,TESTZONE,SizingPeriod: WINTER DESIGN,0.1998787465,1.1386149670,Pass,Pass,1.4772590364E-002,6.3561935182E-002,Pass,Pass
+Environment,SUMMER DESIGN,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,46.00,10.70,DefaultMultipliers,99063,230,5.3,1.00,No ,No 
+Environment:Design_Day_Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAEClearSky
+Environment:WarmupDays,  6
+ Warmup Convergence Information,TESTZONE,SizingPeriod: SUMMER DESIGN,0.2547480018,1.2060165754,Pass,Pass,4.4453519194E-002,0.1648666026,Pass,Pass
+Environment,ANNUALSIM,WeatherFileRunPeriod,01/01,12/31,Sunday,365,UseWeatherFile,Yes,Yes,No ,Yes,Yes
+Environment:Daylight Saving,No,
+Environment:WarmupDays,  6
+ Warmup Convergence Information,TESTZONE,RunPeriod: ANNUALSIM,0.1472132182,0.2554778424,Pass,Pass,6.0549987471E-002,0.3028155601,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS). IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number NominalSurface, Number Parallel Sims
+Program Control:Threads/Parallel Sims, Yes,4, 1, 1, 1, 10, 1, N/A
+End of Data
